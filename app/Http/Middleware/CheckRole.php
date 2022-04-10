@@ -8,8 +8,17 @@ use Illuminate\Http\Request;
 class CheckRole
 {
 
-    public function handle(Request $request, Closure $next)
+    public function handle($request, Closure $next, ...$roles)
     {
-        return $next($request);
+        if (in_array($request->user()->role, $roles)){
+            return $next($request);
+        }
+        return redirect('/error');
+
+        // if (auth()->user()->role="admin"){
+        //     return redirect('/admin/dashboard');
+        // } elseif (auth()->user()->role="resepsionis") {
+        //     return redirect('/resepsionis/dashboard');
+        // }
     }
 }

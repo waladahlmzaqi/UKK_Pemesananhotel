@@ -17,17 +17,38 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'username' => 'admin',
+            'name' => 'admin',
             'email' => 'admin@email.com',
             'password' => Hash::make('admin'),
             'role' => 'admin'
         ]);
 
         DB::table('users')->insert([
-            'username' => 'resepsionis',
+            'name' => 'resepsionis',
             'email' => 'resepsionis@email.com',
             'password' => Hash::make('resepsionis'),
             'role' => 'resepsionis'
         ]);
+
+
+
+        // DB::table('phone_manies')->insert([
+        //     'user_id' => 1,
+        //     'phone_number' => '1234567890',
+        // ]);
+        // DB::table('phone_manies')->insert([
+        //     'user_id' => 1,
+        //     'phone_number' => '1029384756',
+        // ]);
+
+
+        // DB::table('phone_manies')->insert([
+        //     'user_id' => 2,
+        //     'phone_number' => '0987654321',
+        // ]);
+        // DB::table('phone_manies')->insert([
+        //     'user_id' => 2,
+        //     'phone_number' => '6574839201',
+        // ]);
     }
 }

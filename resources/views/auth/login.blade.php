@@ -7,17 +7,17 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <div class="login100-form-title" style="background-image: url({{asset('formlogin/images/bg-01.jpg')}});">
+            <div class="login100-form-title" style="background-image: url({{asset('img/hero_login.jpg')}});">
                 <span class="login100-form-title-1">
                     Sign In
                 </span>
             </div>
 
-            <form class="login100-form validate-form" action="/login" method="post">
+            <form class="login100-form validate-form" action="{{route('auth.postlogin')}}" method="post">
                 @csrf
                 <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
-                    <span class="label-input100">Username</span>
-                    <input class="input100" type="text" name="username" placeholder="Enter username" id="username" autofocus>
+                    <span class="label-input100">Email</span>
+                    <input class="input100" type="text" name="email" placeholder="Enter email" id="email" autofocus>
                     <span class="focus-input100"></span>
                 </div>
 

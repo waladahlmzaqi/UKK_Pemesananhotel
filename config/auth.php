@@ -40,6 +40,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+         ],
+
+         'resepsionis' => [
+            'driver' => 'session',
+            'provider' => 'resepsioniss',
+         ],
     ],
 
     /*
@@ -63,6 +73,16 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+
+        'resepsioniss' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Resepsionis::class,
         ],
 
         // 'users' => [
